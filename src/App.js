@@ -1,8 +1,26 @@
 import React from "react";
-import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Login from "./Login";
+import Register from "./Register";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <Router>
+      <div className="app">
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/">
+            <h1>I am logged in</h1>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
