@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Body from "./Body";
+import Header from "./Header";
 import Login from "./Login";
-import Register from "./Register";
+import Signup from "./Signup";
 
 function App() {
   return (
@@ -12,10 +14,11 @@ function App() {
             <Login />
           </Route>
           <Route path="/register">
-            <Register />
+            <Signup />
           </Route>
           <Route path="/">
-            <h1>I am logged in</h1>
+            <Header />
+            <Body />
           </Route>
         </Switch>
       </div>

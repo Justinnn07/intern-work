@@ -11,11 +11,14 @@ function Login() {
   const SignIn = (e) => {
     e.preventDefault();
     // firebase authentication works
-    auth.signInWithEmailAndPassword(email, password).then((auth) => {
-      if (auth) {
-        history.push("/");
-      }
-    });
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        if (auth) {
+          history.push("/");
+        }
+      })
+      .catch((err) => alert(err.message));
   };
   return (
     <div className="login">
