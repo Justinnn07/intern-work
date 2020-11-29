@@ -43,9 +43,9 @@ function Login() {
           <button onClick={SignIn} className="sign-in">
             Sign-In
           </button>
-          <p>This is for project</p>
           <Link to="/register">
-            <button className="register">Register</button>
+            {/* <button className="register">Register</button> */}
+            Register
           </Link>
         </form>
       </div>

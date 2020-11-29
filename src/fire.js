@@ -22,7 +22,9 @@ class Fire {
         displayName: user.displayName,
         email: user.email,
         uid: this.uid,
-        displayImage: "",
+        company: user.company,
+        phno: user.phno,
+        dob: user.dob,
       });
     } catch (error) {
       alert(error);

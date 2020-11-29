@@ -134,20 +134,63 @@ class Signup extends Component {
                   });
                 }}
               />
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                id="company"
+                label="Company"
+                name="company"
+                value={this.state.user.company}
+                onInput={(e) => {
+                  this.setState({
+                    user: { ...this.state.user, company: e.target.value },
+                  });
+                }}
+              />
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                id="phno"
+                label="Phone Number"
+                name="phno"
+                value={this.state.user.phno}
+                onInput={(e) => {
+                  this.setState({
+                    user: { ...this.state.user, phno: e.target.value },
+                  });
+                }}
+              />
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                id="dob"
+                label="Date Of Birth"
+                name="dob"
+                value={this.state.user.dob}
+                onInput={(e) => {
+                  this.setState({
+                    user: { ...this.state.user, dob: e.target.value },
+                  });
+                }}
+              />
               <Typography component="h5" variant="h6" color="error">
                 {this.state.error ? this.state.error : ""}
               </Typography>
-              <Link to="/login">
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  color="secondary"
-                  className={classes.submit}
-                >
-                  Sign Up
-                </Button>
-              </Link>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="secondary"
+                className={classes.submit}
+              >
+                Sign Up
+              </Button>
               <Grid container>
                 <Grid item>
                   <Link to="/" activeClassName="current">
@@ -163,4 +206,5 @@ class Signup extends Component {
     );
   }
 }
+
 export default withStyles(styles, { withTheme: true })(Signup);
