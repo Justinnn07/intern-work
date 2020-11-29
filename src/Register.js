@@ -17,7 +17,7 @@ function Register() {
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
         if (auth) {
-          history.push("/");
+          history.push("/login");
         }
       })
       .catch((err) => alert(err.message));
